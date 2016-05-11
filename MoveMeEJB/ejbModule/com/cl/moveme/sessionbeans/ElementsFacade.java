@@ -14,9 +14,8 @@ import javax.persistence.PersistenceContext;
  *
  * @author Chrystian Duarte
  */
-@Stateless
+@Stateless(mappedName="Elements",name="elementsejbref")
 public class ElementsFacade extends AbstractFacade<Elements> implements ElementsFacadeLocal {
-
     @PersistenceContext(unitName = "MoveMe-ejbPU")
     private EntityManager em;
 
@@ -27,6 +26,7 @@ public class ElementsFacade extends AbstractFacade<Elements> implements Elements
 
     public ElementsFacade() {
         super(Elements.class);
+        
     }
     
 }

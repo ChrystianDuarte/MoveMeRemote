@@ -1,6 +1,17 @@
 <?page title="Auto Generated index.zul"?>
-<window title="Hello World!!" border="normal" width="200px">
+<?variable-resolver class="org.zkoss.zkplus.jndi.JndiVariableResolver" ?>
+<window title="Hello World!!" border="normal" width="200px"
+	apply="com.cl.moveme.controlers.MovemeController">
 
-<label value="You are using: ${desktop.webApp.version}"/>
+	<label value="You are using: ${desktop.webApp.version}" />
+	<hbox align="center">
+		Keyword:
+		<textbox id="keywordBox" />
+		<button id="searchButton" label="Search"
+			image="/widgets/getting_started/img/search.png" />
+	</hbox>
+
+
+
 
 </window>
