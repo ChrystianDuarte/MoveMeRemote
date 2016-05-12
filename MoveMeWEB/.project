@@ -3,6 +3,7 @@
 	<name>MoveMeWEB</name>
 	<comment></comment>
 	<projects>
+		<project>MoveMeEA</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

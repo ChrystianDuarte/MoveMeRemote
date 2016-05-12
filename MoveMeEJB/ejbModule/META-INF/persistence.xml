@@ -3,8 +3,8 @@
 	<persistence-unit name="MoveMe-ejbPU" transaction-type="JTA">
     <jta-data-source>jdbc/moveme</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
-   <properties>
+  <!--   <properties>
         <property name="jboss.entity.manager.factory.jndi.name" value="java:comp/entityManagerFactory"/>
-    </properties>
+    </properties>-->
   </persistence-unit>
 </persistence>
