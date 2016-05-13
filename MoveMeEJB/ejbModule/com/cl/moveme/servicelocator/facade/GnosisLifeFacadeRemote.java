@@ -15,7 +15,11 @@ import javax.ejb.Remote;
 public interface GnosisLifeFacadeRemote {
 
     public java.lang.String getHola();
-
+    public int countElements() ;
+  
+    public int countPersona();
+    public int countOportunidades();
+    
     //public com.colsin.gnosislife.entities.SegIndicadores findMonitoring(java.lang.String codeIndicator, java.util.Date dateObjetive);
 
   

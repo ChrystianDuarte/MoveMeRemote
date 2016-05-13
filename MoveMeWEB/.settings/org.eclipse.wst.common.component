@@ -2,6 +2,9 @@
     <wb-module deploy-name="MoveMeWEB">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="MoveMePOJO.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/MoveMePOJO/MoveMePOJO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="MoveMeWEB"/>
         <property name="java-output-path" value="/MoveMeWEB/build/classes"/>
     </wb-module>

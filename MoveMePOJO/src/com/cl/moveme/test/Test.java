@@ -1,6 +1,6 @@
 package com.cl.moveme.test;
 
-import org.apache.derby.tools.sysinfo;
+
 
 import com.cl.moveme.servicelocator.delegate.GnosisLifeBusinessDelegate;
 
@@ -11,7 +11,10 @@ public class Test {
 		
 		delegate = new GnosisLifeBusinessDelegate();
 		System.out.println("----------Start--------");
-		System.out.println(delegate.getHola());
+			
+		System.out.println("Numero de elementos= "+delegate.countElements());
+		System.out.println("Numero de Persona= "+delegate.countPersona());
+		System.out.println("Numero de opy= " +delegate.countOportunidades());
 		System.out.println("----------Finish--------");
 		
 	}	

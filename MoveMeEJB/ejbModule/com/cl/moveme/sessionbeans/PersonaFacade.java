@@ -5,7 +5,7 @@
  */
 package com.cl.moveme.sessionbeans;
 
-import com.cl.moveme.entities.Elements;
+import com.cl.moveme.entities.Persona;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author Chrystian Duarte
  */
 @Stateless
-public class ElementsFacade extends AbstractFacade<Elements> implements ElementsFacadeLocal {
+public class PersonaFacade extends AbstractFacade<Persona> implements PersonaFacadeLocal {
 
     @PersistenceContext(unitName = "MoveMe-ejbPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class ElementsFacade extends AbstractFacade<Elements> implements Elements
         return em;
     }
 
-    public ElementsFacade() {
-        super(Elements.class);
+    public PersonaFacade() {
+        super(Persona.class);
     }
     
 }
