@@ -1,0 +1,44 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+	<style>
+		.breeze .complex-layout, .breeze .complex-layout .z-south,
+		.breeze .complex-layout .z-west { background: #F7F7F7; }
+		.z-borderlayout { background: #FFFFFF } .complex-layout .z-north
+		{ background: #008BB6; } img.complex-layout-header-img {
+		padding: 0 10px; } .complex-layout-header-label { position:
+		relative; top: -30px; padding-left: 40px; font-size: 24px;
+		color: Black; font-weight: bold; } .inner-border, .inner-border
+		.z-north, .inner-border .z-west, .inner-border .z-south,
+		.inner-border .z-east { background: #FFFFFF; } .dl-link {
+		text-decoration: none; cursor: pointer; }
+	</style>
+
+	<borderlayout>
+		<north title="ZK Moveme Project" size="15%" splittable="true">
+			<div>
+				<label sclass="complex-layout-header-label" />
+			</div>
+		</north>
+		<center border="0">
+			<borderlayout>
+				<west size="30%" flex="true" border="0"
+					splittable="true">
+					<div style="background: #008BB6">
+						<label value="30%"
+							style="color:white;font-size:50px" />
+					</div>
+				</west>
+				<center>
+					<div>
+					<include src="oportunidadInputBoard.zul"></include>
+					</div>
+					
+				</center>
+
+			</borderlayout>
+		</center>
+	</borderlayout>
+
+
+</zk>
