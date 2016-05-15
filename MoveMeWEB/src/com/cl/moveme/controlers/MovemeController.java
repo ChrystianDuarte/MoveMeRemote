@@ -1,5 +1,8 @@
 package com.cl.moveme.controlers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.ejb.EJB;
 
 import org.zkoss.zk.ui.Component;
@@ -9,6 +12,7 @@ import org.zkoss.zk.ui.util.GenericForwardComposer;
 
 import org.zkoss.zul.Textbox;
 
+import com.cl.moveme.entities.Oportunidad;
 import com.cl.moveme.servicelocator.delegate.GnosisLifeBusinessDelegate;
 
 
@@ -32,6 +36,7 @@ public class MovemeController extends GenericForwardComposer {
 
 	@Wire
 	private Textbox keywordBox;
+	List<Oportunidad> oportunidadList =new ArrayList<Oportunidad>();
 
 	/**
 	 * @param args
@@ -44,9 +49,14 @@ public class MovemeController extends GenericForwardComposer {
 		System.out.println("Entra a doafter");
 		delegate = new GnosisLifeBusinessDelegate();
 		System.out.println("Inicia Contexto");
-		System.out.println("Numero de registros"+delegate.getHola());
+		System.out.println("------"+delegate.getHola());
+		System.out.println("#Elementos= "+delegate.countElements());
+		System.out.println("#Numero de Oportunidades="+delegate.countOportunidades());
+		System.out.println("#Numero de Personas= "+delegate.countPersona());
 		
-
+		System.out.println(delegate.findAllOportunidad());
+		oportunidadList =new ArrayList(delegate.findAllOportunidad()); 
+		System.out.println(oportunidadList.size());
 	}
 	/*
 	 * @Listen("onClick = #searchButton") public void search(){

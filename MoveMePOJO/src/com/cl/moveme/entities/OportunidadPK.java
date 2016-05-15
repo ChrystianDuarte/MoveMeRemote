@@ -19,12 +19,10 @@ import javax.validation.constraints.NotNull;
 public class OportunidadPK implements Serializable {
 
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "ID")
+    @Column(name = "ID" ,nullable = false)
     private int id;
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "RESPONSABLE")
+    @Column(name = "RESPONSABLE",nullable= false)
     private int responsable;
 
     public OportunidadPK() {

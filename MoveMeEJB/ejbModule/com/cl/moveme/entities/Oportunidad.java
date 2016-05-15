@@ -41,9 +41,8 @@ public class Oportunidad implements Serializable {
     @EmbeddedId
     protected OportunidadPK oportunidadPK;
     @Basic(optional = false)
-    @NotNull
     @Size(min = 1, max = 50)
-    @Column(name = "NOMBRE")
+    @Column(name = "NOMBRE" ,nullable=false)
     private String nombre;
     @Size(max = 50)
     @Column(name = "TIPO")

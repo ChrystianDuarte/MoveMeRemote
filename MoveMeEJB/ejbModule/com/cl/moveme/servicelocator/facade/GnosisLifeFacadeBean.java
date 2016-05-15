@@ -4,9 +4,12 @@
  */
 package com.cl.moveme.servicelocator.facade;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
+import com.cl.moveme.entities.Oportunidad;
 import com.cl.moveme.sessionbeans.ElementsFacadeLocal;
 import com.cl.moveme.sessionbeans.OportunidadFacadeLocal;
 import com.cl.moveme.sessionbeans.PersonaFacadeLocal;
@@ -47,28 +50,18 @@ public class GnosisLifeFacadeBean implements GnosisLifeFacadeRemote {
     	return oportunidadFacadeLocal.count();
     	
     }
-
-    /**
-     * Retorna un obj IngIndicadorGrafica de acuerdo al codigo
-     * @param ingCode
-     * @return
-     * @throws EvaluationException
-     */
-  /*  public IngIndicadorGrafica findIndicatorByIndicatorGrafica(String ingCode) throws EvaluationException {
-        return ingIndicadorGraficaFacadeLocal.findIndicatorByIndicatorGrafica(ingCode);
-    }*/
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method" or "Web Service > Add Operation")
-    // <editor-fold defaultstate="collapsed" desc="/*commentpublic void remove(SegIndicadores segIndicadores);// </editor-fold>*/">
-    /**
-     * Retorna la lista de seguimientos de un indicador de acuerdo al codigo del indicador
-     * @param codeIndicator
-     * @return
-     */
-  /*  public List<SegIndicadores> findAllSegIndicatorByCode(String codeIndicator) {
-        return segIndicadoresFacade.findAllSegIndicatorByCode(codeIndicator);
-    }*/
+    public List<?> findAllOportunidad(){
+    	return oportunidadFacadeLocal.findAll();
+    	
+    }
+    public void createOportunidad(Oportunidad oportunidad) {
+    	
+    	System.out.println("Contexto EJB-crear oportunidad:"+oportunidad);
+    	System.out.println("Contexto EJB-crear oportunidadPK:"+oportunidad.getOportunidadPK());
+    	System.out.println("Contexto EJB-crear oportunidadNombre:"+oportunidad.getNombre());
+    	System.out.println("Contexto EJB-crear oportunidadTipo:"+oportunidad.getTipo());
+    	oportunidadFacadeLocal.create(oportunidad);
+    }
 
   
 }

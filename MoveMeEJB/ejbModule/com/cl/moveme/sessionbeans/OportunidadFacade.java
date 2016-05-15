@@ -24,7 +24,7 @@ public class OportunidadFacade extends AbstractFacade<Oportunidad> implements Op
     protected EntityManager getEntityManager() {
         return em;
     }
-
+    
     public OportunidadFacade() {
         super(Oportunidad.class);
     }

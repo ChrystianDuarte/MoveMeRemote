@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.cl.moveme.entities.Oportunidad;
 import com.cl.moveme.servicelocator.facade.GnosisLifeFacadeRemote;
 
 /**
@@ -45,6 +46,20 @@ public class GnosisLifeBusinessDelegate {
 
 		return fachada.countPersona();
 	}
+	
+	
+	 public List<?> findAllOportunidad(){
+		 
+		 return fachada.findAllOportunidad();
+	 }
+	 
+	 public void createOportunidad(Oportunidad oportunidad){
+		 System.out.println("Contexto POJO-crear oportunidad:"+oportunidad);
+	    	System.out.println("Contexto POJO-crear oportunidadPK:"+oportunidad.getOportunidadPK());
+	    	System.out.println("Contexto POJO-crear oportunidadNombre:"+oportunidad.getNombre());
+	    	System.out.println("Contexto POJO-crear oportunidadTipo:"+oportunidad.getTipo());
+		 fachada.createOportunidad(oportunidad);
+	 }
 
 	/**
 	 * Retorna un obj IngIndicadorGrafica de acuerdo al codigo
